@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;500;700&display=swap');
+/*Standard Font for Portfolio*/
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body /*Background Color*/
+{
+  background: linear-gradient((rgba(36, 16, 82, 0.7), rgba(36, 16, 82, 0.7)));
+}
+
+a /*Hyperlinks for the Navbar (Home,about,projects,contact)*/
+{
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container /*This is to give the components space from the corners of the page so the 
+text comes more to the middle*/
+{
+  padding-left: 10%;
+  padding-right: 10%;
+}

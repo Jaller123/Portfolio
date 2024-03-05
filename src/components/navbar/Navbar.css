@@ -1,0 +1,27 @@
+nav /*Code for the Navbar*/
+{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0); /* Text Color*/
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.logo /*Code for the logo of the navbar*/
+{
+    width: 250px;
+}
+
+nav ul li /*The positioning for the hyperlinks so they stand aligned with one another*/
+{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 20px;
+    font-size: 16px;
+}
