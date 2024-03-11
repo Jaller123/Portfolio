@@ -30,21 +30,3 @@ text comes more to the middle*/
   padding-right: 10%;
 }
 
-.btn /*Buttons*/
-{
-  background: black;
-  color: #cecece;
-  padding: 16px 25px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-}
-
-.btn:hover /*When hovering over the buttons*/
-{
-    background: #edb44a;
-    transition: 1s;
-    color: black;
-}
