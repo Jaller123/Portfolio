@@ -25,3 +25,22 @@ nav ul li /*The positioning for the hyperlinks so they stand aligned with one an
     margin: 5px 20px;
     font-size: 16px;
 }
+
+.btn /*Buttons*/
+{
+    color: rgb(255, 255, 255);
+    padding: 10px ;
+    font-size: 16px;
+    cursor: pointer;
+    outline: 10px;
+    text-decoration: none;
+    background: linear-gradient(white, white) bottom / 0 .2em no-repeat;
+    transition: 1s;
+    border: none;
+}
+
+.btn:hover /*When hovering over the buttons*/
+{
+    color: rgb(0, 0, 0);
+    background-size: 100% .2em;
+}
