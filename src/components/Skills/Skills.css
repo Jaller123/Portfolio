@@ -1,0 +1,28 @@
+.skills {
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /* Allow skills to wrap into multiple rows */
+    align-items: center; /* Align children vertically */
+    justify-content: center; /* Align children horizontally in the center */
+  }
+  
+  .skill1 {
+    background: rgb(255, 128, 0);
+    color: #ffffff;
+    padding: 16px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    margin: 40px; /* Adjust spacing between skills */
+    text-align: center;
+  }
+  
+  .skills h1
+  {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.4;
+  }
