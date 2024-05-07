@@ -18,12 +18,19 @@ nav /*Code for the Navbar*/
     width: 250px;
 }
 
+nav ul/*The positioning for the hyperlinks so they stand aligned with one another*/
+{
+    position: relative;
+    left: 10%;
+}
+
 nav ul li /*The positioning for the hyperlinks so they stand aligned with one another*/
 {
     display: inline-block;
     list-style: none;
     margin: 5px 20px;
     font-size: 16px;
+    left: 10px;
 }
 
 .btn /*Buttons*/
@@ -43,4 +50,10 @@ nav ul li /*The positioning for the hyperlinks so they stand aligned with one an
 {
     color: rgb(0, 0, 0);
     background-size: 100% .2em;
+}
+
+.dark-nav
+{
+    color: rgb(0, 0, 0); /* Text Color*/
+    transition: 0.5s;
 }

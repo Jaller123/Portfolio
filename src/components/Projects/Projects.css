@@ -1,0 +1,11 @@
+.bg
+{
+    min-height: 100vh;
+    background: rgb(179, 179, 179);
+}
+
+  
+.thirdslide-nav {
+    color: rgb(255, 255, 255) !important;
+    transition: color 0.5s;
+}

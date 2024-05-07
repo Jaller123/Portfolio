@@ -2,9 +2,9 @@
     min-height: 100vh;
     color: white;
     display: flex;
-    flex-wrap: wrap; /* Allow skills to wrap into multiple rows */
-    align-items: center; /* Align children vertically */
-    justify-content: center; /* Align children horizontally in the center */
+    flex-wrap: wrap; 
+    align-items: center; 
+    justify-content: center; 
   }
   
   .skill1 {
@@ -15,7 +15,7 @@
     border-radius: 30px;
     border: 0;
     outline: 0;
-    margin: 40px; /* Adjust spacing between skills */
+    margin: 40px; 
     text-align: center;
   }
   
