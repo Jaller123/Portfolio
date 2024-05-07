@@ -6,14 +6,14 @@ import Projects from './components/Projects/Projects'
 
 const App = () => 
 {
-  const [transition, setTransition] = useState(false);
+
 
   return (
     <div>
-    <Navbar setTransition={setTransition} />
+    <Navbar />
      <Hero />
      <Skills />
-     <Projects transition={transition} setTransition={setTransition} />
+     <Projects/>
     </div>
   )
 }
