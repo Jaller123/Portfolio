@@ -1,27 +1,37 @@
-import React, { useEffect, useState } from 'react'
-import './Navbar.css'
-import logo from '../../assets/logo.png'
+import React, { useEffect, useState } from 'react';
+import './Navbar.css';
+import logo from '../../assets/logo.png';
 
+const Navbar = () => {
+  const [scrolling, setScrolling] = useState(false);
 
-const Navbar = () =>
-{
-  const [transition, setTransition] = useState(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const skillsSection = document.getElementById('skills');
+      const projectsSection = document.getElementById('projects');
 
-  useEffect(() =>
-    {
-      window.addEventListener('scroll', () => 
-        {
-          window.scrollY > 500 ? setTransition(true) : setTransition(false);
-      }) /*The ternary operator makes sure if the transition value is true
-          then it is executed when you scroll halfway down the page*/
-    },[]
-  );
+      if (skillsSection && projectsSection) {
+        if (
+          scrollPosition >= skillsSection.offsetTop && 
+          scrollPosition < projectsSection.offsetTop
+        ) {
+          setScrolling(true);
+        } else {
+          setScrolling(false);
+        }
+      }
+    };
 
-    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-
-  <nav className={`container ${transition ? 'dark-nav' : ''}`}>
+      <nav className={`container ${scrolling ? 'dark-nav' : ''}`}>
         <img src={logo} alt="" className='logo'/> 
         <ul>
             <li>HOME</li>
@@ -29,9 +39,9 @@ const Navbar = () =>
             <li>PROJECTS</li>
             <li><button className='btn'>CONTACT</button></li> 
         </ul>
-    </nav>
+      </nav>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

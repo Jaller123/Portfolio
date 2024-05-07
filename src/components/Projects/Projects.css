@@ -1,7 +1,8 @@
 .bg
 {
     min-height: 100vh;
-    background: rgb(179, 179, 179);
+    background: rgb(36, 36, 36);
+    transition: color 0.5s;
 }
 
   
