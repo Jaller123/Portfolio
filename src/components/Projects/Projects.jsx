@@ -8,7 +8,7 @@ const Projects = () =>
 
   return (
     <>
-    <div className = "bg">Projects
+    <div id="projects" className='bg'>Projects
     </div>
     </>
   )

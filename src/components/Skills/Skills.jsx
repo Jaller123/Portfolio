@@ -2,8 +2,8 @@ import './Skills.css';
 
 const Skills = () => {
   return (
-    <div className='skills'>
-    <h1>These are the skills have:</h1>
+    <div  id="skills" className='skills'>
+    <h1>These are the skills I have:</h1>
       <div className='row'>
         <div className='skill1'>React</div>
         <div className='skill1'>JS</div>
