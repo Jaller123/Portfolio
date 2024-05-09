@@ -37,7 +37,7 @@ const Navbar = () => {
             <li>HOME</li>
             <li>ABOUT</li>
             <li>PROJECTS</li>
-            <li><button className='btn'>CONTACT</button></li> 
+            <li>CONTACT</li> 
         </ul>
       </nav>
     </>
