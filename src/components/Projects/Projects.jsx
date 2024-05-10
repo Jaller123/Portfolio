@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 import { Carousel } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
-import video1 from './ProjectsFolder/alloverse.mp4'
-import video2 from './ProjectsFolder/furniturear.mp4'
+import video1 from './ProjectsFolder/alloverse.mp4';
+import video2 from './ProjectsFolder/furniturear.mp4';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Projects = () => 
@@ -14,32 +14,43 @@ const Projects = () =>
             id: 1,
             title: "Alloverse Amusement Park",
             src: video1,
-            description: "This was a Ferris wheel made by me in LUA!"
+            description: "This was a project I made in my first internship. I built this app with LUA and Blender!"
         },
         {
             id: 2,
-            title: "FurnitureAR",
+            title: "AR App",
             src: video2,
-            description: "This is an AR App I made in C# 3 years back!"
+            description: "This is the first app I made in AR! Unfortunately I didn't have have github back then so I don't have a source code."
         }
     ];
-  return (
-    <>
-     <div id="projects" className="bg">
-            <Carousel>
-                {videoProperties.map((videoObj) => (
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const handleSlideChange = (index) => 
+    {
+        setCurrentSlide(index);
+    };
+
+    return (
+        <div id="projects" className="bg">
+            <div className='bg'>
+            <Carousel interval={null} activeIndex={currentSlide} onSelect={handleSlideChange}>
+                {videoProperties.map((videoObj, index) => 
+                (
                     <Carousel.Item key={videoObj.id}>
-                        <ReactPlayer url={videoObj.src} controls playing={false} /> {/* Set playing prop to false */}
-                        <Carousel.Caption>
+                    <div className="text-container">
                             <h3>{videoObj.title}</h3>
                             <p>{videoObj.description}</p>
-                        </Carousel.Caption>
+                            {videoObj.id === 1 && ( <button className="btn btn-primary">Source Code</button>)}
+                            {videoObj.id === 2 && ( <button className="btn btn-primary">Source Code</button>)}
+                        </div>
+                        <ReactPlayer className ="video-player" url={videoObj.src} controls playing={false} />
                     </Carousel.Item>
                 ))}
             </Carousel>
+            </div>
         </div>
-    </>
-  )
+    );
 }
 
-export default Projects
+export default Projects;

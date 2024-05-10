@@ -21,7 +21,7 @@ nav /*Code for the Navbar*/
 nav ul/*The positioning for the hyperlinks so they stand aligned with one another*/
 {
     position: relative;
-    left: 10%;
+    left: 60%;
 }
 
 nav ul li /*The positioning for the hyperlinks so they stand aligned with one another*/
