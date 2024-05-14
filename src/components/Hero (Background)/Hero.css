@@ -31,16 +31,17 @@
     line-height: 1.6;
 }
 
-.btn 
+.btn-primary
 {
-    padding: 12px 25px;
-    font-size: 18px;
-    border-radius: 30px;
-    margin-top: 20px;
+    background-color: #000 !important;
+    border-color: white !important;
+    border-radius:  10px !important;
+    
 }
 
-.btn:hover 
+.btn-primary:hover 
 {
-    background: white;
-    color: #000;
+    background: white !important;
+    color: #000 !important;
+    border-color: black !important;
 }
