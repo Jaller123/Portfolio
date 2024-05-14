@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -34,10 +35,10 @@ const Navbar = () => {
       <nav className={`container ${scrolling ? 'dark-nav' : ''}`}>
         <img src={logo} alt="" className='logo'/> 
         <ul>
-            <li>HOME</li>
-            <li>SKILLS</li>
-            <li>PROJECTS</li>
-            <li>CONTACT</li> 
+            <li><Link to='hero' smooth={true} offset={0} duration={50}>HOME</Link></li>
+          <li><Link to='skills' smooth={true} offset={0} duration={50}>SKILLS</Link></li>
+            <li><Link to='projects' smooth={true} offset={0} duration={50}>PROJECTS</Link></li>
+            <li><Link to='Contact' smooth={true} offset={0} duration={50}>CONTACT</Link></li> 
         </ul>
       </nav>
     </>
