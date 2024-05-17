@@ -37,8 +37,38 @@ nav ul li /*The positioning for the hyperlinks so they stand aligned with one an
 
 .dark-nav
 {
-    color: rgb(0, 0, 0); /* Text Color*/
-    transition: 0.5s;
+    color: rgb(0, 0, 0); 
+}
+
+
+.skills-nav {
+    color: black;
+}
+
+.projects-nav 
+{
+    color: white;
+}
+
+.contact-nav {
+    color: rgb(0, 0, 0);
+}
+
+
+nav 
+{
+    transition: color 0.5s;
+}
+
+
+@media (max-width: 1440px) 
+{
+    nav ul 
+    {
+        left: 43%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
 }
 
 @media (max-width: 1024px) 

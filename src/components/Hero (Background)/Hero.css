@@ -1,7 +1,7 @@
 .hero 
 {
     min-height: 100vh;
-    background: linear-gradient(rgba(36, 16, 82, 0.7), rgba(36, 16, 82, 0.7)), url('../../assets/banner.png');
+    background: linear-gradient(rgba(16, 78, 82, 0.7), rgba(36, 16, 82, 0.7)), url('../../assets/banner.png');
     background-size: cover;
     background-position: center;
     color: white;
