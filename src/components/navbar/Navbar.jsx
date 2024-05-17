@@ -4,22 +4,37 @@ import logo from '../../assets/logo.png';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
-  const [scrolling, setScrolling] = useState(false);
+  const [navClass, setNavClass] = useState('');
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => 
+    {
       const scrollPosition = window.scrollY;
       const skillsSection = document.getElementById('skills');
       const projectsSection = document.getElementById('projects');
+      const contactSection = document.getElementById('contact');
 
-      if (skillsSection && projectsSection) {
-        if (
-          scrollPosition >= skillsSection.offsetTop && 
-          scrollPosition < projectsSection.offsetTop
-        ) {
-          setScrolling(true);
-        } else {
-          setScrolling(false);
+      if (skillsSection && projectsSection && contactSection) 
+      {
+        const skillsSectionTop = skillsSection.offsetTop;
+        const projectsSectionTop = projectsSection.offsetTop;
+        const contactSectionTop = contactSection.offsetTop;
+
+        if (scrollPosition >= contactSectionTop) 
+        {
+          setNavClass('contact-nav');
+        } else if (scrollPosition >= projectsSectionTop) 
+          
+        {
+          setNavClass('projects-nav');
+        } else if (scrollPosition >= skillsSectionTop) 
+
+        {
+          setNavClass('skills-nav');
+        } else 
+
+        {
+          setNavClass('');
         }
       }
     };
@@ -31,17 +46,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <>
-      <nav className={`container ${scrolling ? 'dark-nav' : ''}`}>
-        <img src={logo} alt="" className='logo'/> 
-        <ul>
-            <li><Link to='hero' smooth={true} offset={0} duration={50}>HOME</Link></li>
-          <li><Link to='skills' smooth={true} offset={0} duration={50}>SKILLS</Link></li>
-            <li><Link to='projects' smooth={true} offset={0} duration={50}>PROJECTS</Link></li>
-            <li><Link to='Contact' smooth={true} offset={0} duration={50}>CONTACT</Link></li> 
-        </ul>
-      </nav>
-    </>
+    <nav className={`container ${navClass}`}>
+      <img src={logo} alt="" className='logo'/>
+      <ul>
+        <li><Link to='hero' smooth={true} offset={0} duration={50}>HOME</Link></li>
+        <li><Link to='skills' smooth={true} offset={0} duration={50}>SKILLS</Link></li>
+        <li><Link to='projects' smooth={true} offset={0} duration={50}>PROJECTS</Link></li>
+        <li><Link to='contact' smooth={true} offset={0} duration={50}>CONTACT</Link></li>
+      </ul>
+    </nav>
   );
 };
 
