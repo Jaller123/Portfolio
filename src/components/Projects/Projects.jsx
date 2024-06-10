@@ -41,7 +41,7 @@ const Projects = () =>
                     <div className="text-container">
                             <h3>{videoObj.title}</h3>
                             <p>{videoObj.description}</p>
-                            {videoObj.id === 1 && (<a href="https://github.com/Kenatho/FerryWheel" className="btn btn-primary">Source Code</a>)}
+                            {videoObj.id === 1 && (<a href="https://github.com/Kenatho/FerryWheel" target="_blank" className="btn btn-primary">Source Code</a>)}
 
                         </div>
                         <ReactPlayer className ="video-player" url={videoObj.src} controls playing={false} />
