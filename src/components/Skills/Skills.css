@@ -28,7 +28,8 @@
   line-height: 1.4;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1440px) 
+{
   .skills 
   {
     width: 70%; /* Adjust the width of the skills container */
@@ -46,5 +47,19 @@
     width: 60%; 
     position: relative;
     left: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills 
+  {
+    width: 70%; /* Adjust the width of the skills container */
+    margin: 0 auto; /* Center the skills container */
+  }
+  .skill1 
+  {
+    padding: 25px 50px;
+    text-align: center;
+    width: 60%; /* Adjust this value if needed */
   }
 }
