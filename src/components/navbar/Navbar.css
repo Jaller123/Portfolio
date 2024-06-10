@@ -31,8 +31,12 @@ nav ul li /*The positioning for the hyperlinks so they stand aligned with one an
     margin: 5px 20px;
     font-size: 16px;
     left: 10px;
+    transition: .1s; 
 }
-
+nav ul li:hover
+{
+    transform: scale(1.2);
+}
 
 
 .dark-nav

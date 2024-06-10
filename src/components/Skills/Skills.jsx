@@ -20,10 +20,10 @@ const Skills = () => {
       </div>
       <div className='row'>
         <div className='col-sm-5'>
-          <div className='skill1'>Backend</div>
+          <div className='skill1'>Node.js</div>
         </div>
         <div className='col-sm-5'>
-          <div className='skill1'>Frontend</div>
+          <div className='skill1'>C#</div>
         </div>
         <div className='col-sm-5'>
           <div className='skill1'>GitHub</div>
