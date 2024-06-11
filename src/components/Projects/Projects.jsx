@@ -4,6 +4,8 @@ import { Carousel } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
 import video1 from './ProjectsFolder/alloverse.mp4';
 import video2 from './ProjectsFolder/furniturear.mp4';
+import video3 from './ProjectsFolder/foodapp.mp4'
+import video4 from './ProjectsFolder/weatherapp.mp4'
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Projects = () => 
@@ -21,6 +23,18 @@ const Projects = () =>
             title: "AR App",
             src: video2,
             description: "This is the first app I made in AR. I developed this app with C# and designed the UI in Unity! Unfortunately I didn't have have github back then so I don't have a source code for this project. I do have the app saved on my phone so I feel free to contact me if you want to see the app in real time."
+        },
+        {
+            id: 3,
+            title: "Food App",
+            src: video3,
+            description: "This is a food app I made in school where you can search for recipes to make at home! This was my first react app I developed."
+        },
+        {
+            id: 4,
+            title: "Weather App",
+            src: video4,
+            description: "This is a weather app I made while I studied during school. I wanted to experiment with my JS skills and created a project."
         }
     ];
 
@@ -33,6 +47,7 @@ const Projects = () =>
 
     return (
         <div id="projects" className="bg">
+            <h1>Projects</h1>
             <div className='bg'>
             <Carousel interval={null} activeIndex={currentSlide} onSelect={handleSlideChange}>
                 {videoProperties.map((videoObj, index) => 
@@ -42,7 +57,10 @@ const Projects = () =>
                             <h3>{videoObj.title}</h3>
                             <p>{videoObj.description}</p>
                             {videoObj.id === 1 && (<a href="https://github.com/Kenatho/FerryWheel" target="_blank" className="btn btn-primary">Source Code</a>)}
-
+                            {videoObj.id === 3 && (<div><a href="https://food-app-mu-peach.vercel.app" target="_blank" className="btn btn-primary me-2">Live Demo</a>
+                            <a href="https://github.com/Jaller123/Food-App" target="_blank" className="btn btn-primary">Source Code</a></div>)} 
+                            {videoObj.id === 4 && (<div><a href="https://weather-app-vercel-gilt.vercel.app" target="_blank" className="btn btn-primary me-2">Live Demo</a>
+                                <a href="https://github.com/Jaller123/weather-app-vercel.git" target="_blank" className="btn btn-primary">Source Code</a></div>)}     
                         </div>
                         <ReactPlayer className ="video-player" url={videoObj.src} controls playing={false} />
                     </Carousel.Item>
