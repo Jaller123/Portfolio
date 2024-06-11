@@ -47,7 +47,7 @@ const Projects = () =>
 
     return (
         <div id="projects" className="bg">
-            <h1>Projects</h1>
+            <h1 style={{ textAlign: 'center', color: 'white',}}>Projects</h1>
             <div className='bg'>
             <Carousel interval={null} activeIndex={currentSlide} onSelect={handleSlideChange}>
                 {videoProperties.map((videoObj, index) => 
