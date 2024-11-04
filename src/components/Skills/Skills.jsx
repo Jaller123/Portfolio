@@ -31,6 +31,12 @@ const Skills = () => {
         <div className='col-sm-5'>
           <div className='skill1'>HTML/CSS</div>
         </div>
+        <div className='col-sm-5'>
+          <div className='skill1'>MongoDB</div>
+        </div>
+        <div className='col-sm-5'>
+          <div className='skill1'>Storybook</div>
+        </div>
       </div>
     </div>
   );
