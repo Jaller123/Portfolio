@@ -22,7 +22,33 @@
   transition: .2s;
 }
 
+.skill2 {
+  background: rgb(255, 128, 0);
+  color: #ffffff;
+  padding: 7px 1px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  margin: 10px; 
+  text-align: center;
+  width: 20%;
+  transition: .2s;
+}
+
+.skillSetProject
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .skill1:hover
+{
+  transform: scale(1.2);
+}
+
+.skill2:hover
 {
   transform: scale(1.2);
 }
