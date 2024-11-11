@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
+import menuicon from '../../assets/menu-icon.png';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
@@ -54,6 +55,7 @@ const Navbar = () => {
         <li><Link to='projects' smooth={true} offset={0} duration={50}>PROJECTS</Link></li>
         <li><Link to='contact' smooth={true} offset={0} duration={50}>CONTACT</Link></li>
       </ul>
+      <img src={menuicon} alt="" className='menu-icon'></img>
     </nav>
   );
 };
