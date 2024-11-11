@@ -46,16 +46,21 @@ const Navbar = () => {
     };
   }, []);
 
+  const [mobileMenu, setMobileMenu] = useState(false)
+  const toggleMenu = () => {
+    mobileMenu ? setMobileMenu(false) : setMobileMenu(true)
+  }
+
   return (
     <nav className={`container ${navClass}`}>
       <img src={logo} alt="" className='logo'/>
-      <ul>
+      <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
         <li><Link to='hero' smooth={true} offset={0} duration={50}>HOME</Link></li>
         <li><Link to='skills' smooth={true} offset={0} duration={50}>SKILLS</Link></li>
         <li><Link to='projects' smooth={true} offset={0} duration={50}>PROJECTS</Link></li>
         <li><Link to='contact' smooth={true} offset={0} duration={50}>CONTACT</Link></li>
       </ul>
-      <img src={menuicon} alt="" className='menu-icon'></img>
+      <img src={menuicon} alt="" className='menu-icon' onClick={toggleMenu}></img>
     </nav>
   );
 };

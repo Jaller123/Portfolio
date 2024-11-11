@@ -1,114 +1,70 @@
-.bg
-{
+.bg {
     min-height: 100vh;
     background: rgb(36, 36, 36);
     transition: color 0.5s;
 }
 
-.projects-container 
-{
-  position: relative;
-  width: 100%;
+.carousel-content {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-
-.text-container 
-{
-  position: absolute;
-  top: 20%; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  padding: 20px; 
-  color: white;
-  text-align: center;
+.text-container {
+    padding: 20px;
+    color: white;
+    text-align: center;
 }
 
+.responsive-wrapper {
+    position: relative;
+    padding-top: 56.25%; 
+    width: 100%;
+    height: 0;
+    margin: 0 auto;
+}
 
 .video-player {
-  width: 1920%; 
-  height: auto; 
-  margin-top: 20%; 
-  margin-left: 33%;
-}
-
-@media (max-width: 1440px) 
-{
-    .text-container 
-    {
     position: absolute;
-    top: 10%; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    padding: 20px; 
-    color: white;
-    text-align: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 1024px) {
+    .carousel-content {
+        flex-direction: column;
+    }
+    
+}
+
+
+@media (min-width: 768px) {
+    .carousel-content {
+        flex-direction: row;
     }
 
-    .video-player 
-    {
-        margin-left: 28%;
-        margin-top: 25%; 
-    }
-
-    .text-container 
-    {
-        font-size: 14px; /* Adjust font size for smaller screens */
+    .responsive-wrapper {
+        width: 60%;
+        padding-top: 75%; 
     }
 }
 
-@media (max-width: 1024px) 
-{
-    .text-container 
-    {
-    position: absolute;
-    top: 0%; 
-    margin-bottom: 20px;
-    left: 50%; 
-    transform: translateX(-50%); 
-    padding: 20px; 
-    color: white;
-    text-align: center;
-    }
 
-       .video-player 
-    {
-        margin-left: 20%;
-        margin-top: 30%; 
+@media (max-width: 425px) {
+    .responsive-wrapper {
+        width: 100%;
+        padding-top: 100%; /* More square-like aspect ratio for very small screens */
     }
-}
-
-@media (max-width: 768px) 
-{
-    .video-player 
-    {
-        margin-left: 8%;
-        margin-top: 30%; 
-    }
-
     .text-container {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px;
+    }
+    
+    .bg {
+        min-height: 55vh;
     }
 }
-
-@media (max-width: 700px) {
-
-    .video-player {
-    width: 640px;
-    height: 360px;
-    margin-top: 180%;
-    margin-left: -1px;
-    }
-
-    #carousel-control-next
-    {
-        right: 0;
-        top: 60%;
-    }
-
-    #carousel-control-prev
-    {
-        left: 0;
-        top: 60%;
-    }
-}
-

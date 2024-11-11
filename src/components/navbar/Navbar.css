@@ -70,6 +70,12 @@ nav
     cursor: pointer;
 }
 
+@media (max-width: 786px) {
+.hide-mobile-menu {
+    left: 90%; 
+}
+}
+
 
 @media (max-width: 1440px) 
 {
@@ -106,11 +112,14 @@ nav
         display: block;
         width: 30px;
         cursor: pointer;
+        z-index: 1;
+        position: relative;
+        left: 15px;
     }
     nav ul{
         position: fixed;
         top: 0px;
-        left: 90%;
+        left: 130%;
         
         width: 200px;
         padding-top: 70px;
@@ -128,5 +137,10 @@ nav
         position: relative;
         left: -10%;
     };
+}
 
+@media (max-width: 320px) {
+    nav ul {
+        left: 140%;
+    }
 }
