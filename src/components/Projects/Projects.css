@@ -89,3 +89,26 @@
         font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
+
+@media (max-width: 700px) {
+
+    .video-player {
+    width: 640px;
+    height: 360px;
+    margin-top: 180%;
+    margin-left: -1px;
+    }
+
+    #carousel-control-next
+    {
+        right: 0;
+        top: 60%;
+    }
+
+    #carousel-control-prev
+    {
+        left: 0;
+        top: 60%;
+    }
+}
+

@@ -64,6 +64,12 @@ nav
     transition: color 0.5s;
 }
 
+.menu-icon {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
 
 @media (max-width: 1440px) 
 {
@@ -90,4 +96,37 @@ nav
         margin: 10px;
         position: relative;
     }
+}
+
+@media (max-width: 701px) {
+    nav{
+        padding: 15px 0;
+    }
+    .menu-icon {
+        display: block;
+        width: 30px;
+        cursor: pointer;
+    }
+    nav ul{
+        position: fixed;
+        top: 0px;
+        left: 90%;
+        
+        width: 200px;
+        padding-top: 70px;
+        transition: 0.5s;
+        bottom: 0;
+        background: orange
+    }
+    .logo{
+        width: 180px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px 40px;
+        position: relative;
+        left: -10%;
+    };
+
 }
