@@ -18,7 +18,7 @@ const Projects = () => {
             description: "This was the first fullstack app I made during my free time outside of my education. I spent an entire summer learning backend while also cooperating Storybook with my frontend. I made a frontend, backend and app repo for this project and overall it was valuable and exciting project I worked a long time on.",
             skills: ["React", "JS", "Node.js", "Express", "MongoDB", "Storybook", "Figma", "HTML/CSS"],
             link: "https://github.com/stars/Jaller123/lists/cartify",
-            demoText: "Live Demo coming soon!"
+            demoText: "Live Demo coming out soon!"
         },
         {
             id: 2,
