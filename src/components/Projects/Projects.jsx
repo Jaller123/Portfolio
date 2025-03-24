@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Projects.css';
 import { Carousel } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
+import video5 from './ProjectsFolder/cartify.mp4'
 import video1 from './ProjectsFolder/alloverse.mp4';
 import video2 from './ProjectsFolder/furniturear.mp4';
 import video3 from './ProjectsFolder/foodapp.mp4';
@@ -12,6 +13,15 @@ const Projects = () => {
     const videoProperties = [
         {
             id: 1,
+            title: "Cartify WebbShop",
+            src: video5,
+            description: "This was the first fullstack app I made during my free time outside of my education. I spent an entire summer learning backend while also cooperating Storybook with my frontend. I made a frontend, backend and app repo for this project and overall it was valuable and exciting project I worked a long time on.",
+            skills: ["React", "JS", "Node.js", "Express", "MongoDB", "Storybook", "Figma", "HTML/CSS"],
+            link: "https://github.com/stars/Jaller123/lists/cartify",
+            demoText: "Live Demo coming soon!"
+        },
+        {
+            id: 2,
             title: "Alloverse Amusement Park",
             src: video1,
             description: "This was a project I made in my first internship. I built this app by developing the logic/functionalities through terminal with LUA and made the 3D Models/Map using Blender.",
@@ -19,14 +29,14 @@ const Projects = () => {
             link: "https://github.com/Kenatho/FerryWheel"
         },
         {
-            id: 2,
+            id: 3,
             title: "AR App",
             src: video2,
             description: "This is the first app I made in AR. I developed this app with C# and designed the UI in Unity! Unfortunately, I didn't have GitHub back then so I don't have a source code for this project. I do have the app saved on my phone, so feel free to contact me if you want to see the app in real time.",
             skills: ["Unity", "C#", "Terminal"]
         },
         {
-            id: 3,
+            id: 4,
             title: "Food App",
             src: video3,
             description: "This is a food app I made in school where you can search for recipes to make at home! This was my first react app I developed.",
@@ -35,7 +45,7 @@ const Projects = () => {
             demo: "https://food-app-mu-peach.vercel.app"
         },
         {
-            id: 4,
+            id: 5,
             title: "Weather App",
             src: video4,
             description: "This is a weather app I made during school. I wanted to experiment with my JS skills and created this project.",
@@ -62,9 +72,18 @@ const Projects = () => {
                 {videoProperties[currentSlide].link && (
                     <a href={videoProperties[currentSlide].link} target="_blank" rel="noopener noreferrer" className="btn btn-primary me-2">Source Code</a>
                 )}
-                {videoProperties[currentSlide].demo && (
-                    <a href={videoProperties[currentSlide].demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Live Demo</a>
-                )}
+                {videoProperties[currentSlide].demo ? (
+  <a href={videoProperties[currentSlide].demo}
+     target="_blank"
+     rel="noopener noreferrer"
+     className="btn btn-primary">
+    Live Demo
+  </a>
+) : (
+  <span className="demosoon">
+    {videoProperties[currentSlide].demoText}
+  </span>
+)}
                 <div className="skillSetProject">
                     {videoProperties[currentSlide].skills.map(skill => (
                         <div key={skill} className="skill2">
