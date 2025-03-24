@@ -8,8 +8,6 @@ import Contact from './components/Contact/Contact'
 
 const App = () => 
 {
-
-
   return (
     <div>
      <Navbar />
