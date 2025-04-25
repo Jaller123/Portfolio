@@ -45,6 +45,9 @@ const Skills = () => {
             <div className="skill1">MongoDB</div>
           </div>
           <div className="col-sm-5">
+            <div className="skill1">MySQL</div>
+          </div>
+          <div className="col-sm-5">
             <div className="skill1">Storybook</div>
           </div>
           <div className="col-sm-5">
@@ -52,6 +55,15 @@ const Skills = () => {
           </div>
           <div className="col-sm-5">
             <div className="skill1">Git</div>
+          </div>
+          <div className="col-sm-5">
+            <div className="skill1">Docker</div>
+          </div>
+          <div className="col-sm-5">
+            <div className="skill1">WireMock</div>
+          </div>
+          <div className="col-sm-5">
+            <div className="skill1">Cypress/Testing</div>
           </div>
         </div>
       </div>
